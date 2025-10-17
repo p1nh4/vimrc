@@ -1,12 +1,12 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
-"               ██╗   ██╗██╗███╗   ███╗██████╗  ██████╗
-"               ██║   ██║██║████╗ ████║██╔══██╗██╔════╝
-"               ██║   ██║██║██╔████╔██║██████╔╝██║
-"               ╚██╗ ██╔╝██║██║╚██╔╝██║██╔══██╗██║
-"                ╚████╔╝ ██║██║ ╚═╝ ██║██║  ██║╚██████╗
-"                 ╚═══╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝
-"
+"																		  "
+"               ██╗   ██╗██╗███╗   ███╗██████╗  ██████╗					  "
+"               ██║   ██║██║████╗ ████║██╔══██╗██╔════╝					  "
+"               ██║   ██║██║██╔████╔██║██████╔╝██║                        "
+"               ╚██╗ ██╔╝██║██║╚██╔╝██║██╔══██╗██║                        "
+"                ╚████╔╝ ██║██║ ╚═╝ ██║██║  ██║╚██████╗					  "
+"                 ╚═══╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝                   "
+"           															  "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " =========================================================================
@@ -78,7 +78,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'honza/vim-snippets'             " Pacote com snippets prontos
 
   " ---- Interface inicial ----
-  Plug 'mhinz/vim-startify', { 'on': 'Startify' }   " Tela inicial
+  Plug 'mhinz/vim-startify'   	" Tela inicial
 "  Plug 'glepnir/dashboard-nvim', { 'on': 'Dashboard' }  " Dashboard alternativo
 
   " ---- 42 ----
@@ -120,7 +120,7 @@ nnoremap <F3> :NERDTreeToggle<CR>       " F3 abre/fecha o NERDTree
 " autocmd VimEnter * if !argc() | NERDTree | endif
 
 " =========================================================================
-" ✂️ ULtISNIPS (Snippets)
+" ULtISNIPS (Snippets)
 " =========================================================================
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
@@ -150,15 +150,16 @@ set foldlevel=99                        " Começa com tudo expandido
 nnoremap <leader>z za                   " Espaço+z alterna dobra
 augroup remember_folds
   autocmd!
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent! loadview
+  " Só salvar e carregar folds em buffers normais
+  autocmd BufWinLeave * if &buftype == '' && &filetype != 'startify' | mkview | endif
+  autocmd BufWinEnter * if &buftype == '' && &filetype != 'startify' | silent! loadview | endif
 augroup END
 
 " =========================================================================
 " INFORMAÇÕES 42
 " =========================================================================
-let g:user42 = 'davidos-'
-let g:mail42 = 'davidos-@student.42porto.com'
+let g:user42 = 'student'
+let g:mail42 = 'student@student.42city.com'
 
 " =========================================================================
 " STARTIFY (Tela inicial)
