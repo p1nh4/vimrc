@@ -1,11 +1,11 @@
-# Configuração do VIM *.vimrc*
+# Configuração do VIM *(.vimrc)*
 
 Aqui uma configuração simples. 
 Pensada principalmente para a *escola 42.*
 
 ![Screenshot do Vim](assets/vim-previw.png) 
 
-**Foi incluído: **
+**Foi incluído:**
 - Plugins úteis (edição código, navegação e tema)
 - Atalhos personalizados
 - Configurações para as normas da 42
