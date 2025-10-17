@@ -1,27 +1,29 @@
-# Configuração do VIM (.vimrc)
+# Configuração do VIM *.vimrc*
 
-Aqui uma configuração simples. Pensada principalmente para a escola 42.
+Aqui uma configuração simples. 
+Pensada principalmente para a *escola 42.*
 
 ![Screenshot do Vim](assets/vim-previw.png) 
 
-Foi incluído: 
+**Foi incluído: **
 - Plugins úteis (edição código, navegação e tema)
 - Atalhos personalizados
 - Configurações para as normas da 42
 - Comentários explicativos em cada secção do .vimrc
 
-Caso não necesite de uma configuração ou Plugin basta comentar a linha. 
+*Caso não necesite de uma configuração ou Plugin basta comentar a linha.*
+
+--- 
 
 ## Instalação 
+
+Para utilizar esta configuração do Vim, basta instalar os seguintes plugs
+rodando os seguintes comandos:
 
 1. Instale o [vim-plug](https://github.com/junegunn/vim-plug) (gerenciador de plugins):
 ```bash 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
-Para utilizar esta configuração do Vim, basta instalar os seguintes plugs
-rodando os seguintes comandos. 
-
-Bons códigos. 
 
 2. Baixe este .vimrc
 ```bash
@@ -32,10 +34,13 @@ curl -o ~/.vimrc https://raw.githubusercontent.com/teu-usuario/seu-repo/main/.vi
 ```bash
 :PlugInstall
 ```
+--- 
 
 ## Resumo Configurações
 
 ![Demonstração do Vim](assets/vim.gif)
+
+---
 
 ### Plugins 
 
@@ -52,6 +57,8 @@ curl -o ~/.vimrc https://raw.githubusercontent.com/teu-usuario/seu-repo/main/.vi
 | **Header 42**             | [42header](https://github.com/42Paris/42header)                                                          | Cabeçalho automático da 42      |
 | **Linting (C/C++)**       | [ALE](https://github.com/dense-analysis/ale)                                                             | Análise estática e formatação   |
 
+---
+
 ### Atalhos
 
 | Atalho     | Função                               |
@@ -66,5 +73,16 @@ curl -o ~/.vimrc https://raw.githubusercontent.com/teu-usuario/seu-repo/main/.vi
 | `<Space>l` | Mostrar/esconder espaços/tabs        |
 | `<Space>z` | Alternar dobramento de código (fold) |
 
+---
+
 ## Bom código!
-@p1nh4
+```c
+#include <unistd.h>
+
+int main(void)
+{
+    char *autor = "@p1nh4";
+    write(1, autor, 6);  
+    return (0);
+}
+```
