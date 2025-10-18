@@ -22,12 +22,12 @@ rodando os seguintes comandos:
 
 1. Instale o [vim-plug](https://github.com/junegunn/vim-plug) (gerenciador de plugins):
 ```bash 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 2. Baixe este .vimrc
 ```bash
-curl -o ~/.vimrc https://raw.githubusercontent.com/teu-usuario/seu-repo/main/.vimrc
+curl -o ~/.vimrc https://raw.githubusercontent.com/p1nh4/vimrc/main/.vimrc
 ```
 
 3. Abra o Vim e rode na barra de comandos
